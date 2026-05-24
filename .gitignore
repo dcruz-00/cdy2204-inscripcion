@@ -1,0 +1,12 @@
+# Build
+target/
+
+# Maven wrapper
+.mvn/wrapper/maven-wrapper.jar
+
+# VS Code
+.vscode/
+
+# Oracle wallet y credenciales
+wallet/
+src/main/resources/application.properties
