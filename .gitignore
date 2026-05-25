@@ -8,5 +8,4 @@ target/
 .vscode/
 
 # Oracle wallet y credenciales
-wallet/
 src/main/resources/application.properties
