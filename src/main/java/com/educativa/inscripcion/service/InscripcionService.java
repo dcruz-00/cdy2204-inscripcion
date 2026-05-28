@@ -32,4 +32,9 @@ public class InscripcionService {
 
         return inscripcionRepository.save(inscripcion);
     }
+
+    public Inscripcion obtenerPorId(Long id) {
+        return inscripcionRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Inscripción no encontrada"));
+    }
 }
