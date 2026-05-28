@@ -1,6 +1,5 @@
 # Build
 target/
-application-local.yml
 
 # Maven wrapper
 .mvn/wrapper/maven-wrapper.jar
