@@ -27,13 +27,13 @@ public class StorageConfig {
     @Bean
     public AmazonS3 s3Client() {
         System.out.println("ACCESS KEY: " + accessKey);
-        System.out.println("REGION: " + region);
-        AWSCredentials credentials = new BasicSessionCredentials(accessKey, accessKey, sessionToken);
+        System.out.println("SECRET KEY LENGTH: " + (accessSecret != null ? accessSecret.length() : "null"));
+        System.out.println("SESSION TOKEN LENGTH: " + (sessionToken != null ? sessionToken.length() : "null"));
+        AWSCredentials credentials = new BasicSessionCredentials(accessKey, accessSecret, sessionToken);
         return AmazonS3ClientBuilder.standard()
                 .withCredentials(new AWSStaticCredentialsProvider(credentials))
                 .withRegion(region)
                 .build();
     }
-
 
 }
